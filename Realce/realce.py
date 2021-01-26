@@ -11,7 +11,7 @@ def main():
     img_negative = cv2.bitwise_not(img_gray)
     img_contra = cv2.convertScaleAbs(img_gray, alpha=2.0, beta=50)
     img_gamma = adjust_gamma(img_gray, 2.0)
-    img_log = adjust_log(img)
+    img_log = adjust_log(img_gray)
 
     cv2.imshow('Negative', img_negative)
     cv2.imshow('Contrast', img_contra)
